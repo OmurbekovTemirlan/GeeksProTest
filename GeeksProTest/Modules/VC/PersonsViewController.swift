@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class PersonsViewController: BaseViewController {
     
     private let personCollectionView: UICollectionView = {
         let loyaut = UICollectionViewFlowLayout()
@@ -81,7 +81,7 @@ class ViewController: BaseViewController {
 
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension PersonsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         persons.count
@@ -94,7 +94,7 @@ extension ViewController: UICollectionViewDataSource {
     }
 }
 
-extension ViewController: UICollectionViewDelegate {
+extension PersonsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         handlePersonDetailsTap(with: persons[indexPath.row])
     }

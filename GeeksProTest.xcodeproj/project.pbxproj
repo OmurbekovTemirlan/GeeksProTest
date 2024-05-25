@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1853DC0C2C01F21E001E9D2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC0B2C01F21E001E9D2C /* AppDelegate.swift */; };
 		1853DC0E2C01F21E001E9D2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC0D2C01F21E001E9D2C /* SceneDelegate.swift */; };
-		1853DC102C01F21E001E9D2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC0F2C01F21E001E9D2C /* ViewController.swift */; };
+		1853DC102C01F21E001E9D2C /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC0F2C01F21E001E9D2C /* PersonsViewController.swift */; };
 		1853DC152C01F221001E9D2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1853DC142C01F221001E9D2C /* Assets.xcassets */; };
 		1853DC182C01F221001E9D2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1853DC162C01F221001E9D2C /* LaunchScreen.storyboard */; };
 		1853DC242C01F77B001E9D2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC232C01F77B001E9D2C /* BaseViewController.swift */; };
@@ -19,14 +19,14 @@
 		1853DC2E2C020197001E9D2C /* PersonsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC2D2C020197001E9D2C /* PersonsDTO.swift */; };
 		1853DC302C02034A001E9D2C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC2F2C02034A001E9D2C /* Constant.swift */; };
 		1853DC322C0204FB001E9D2C /* DowloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC312C0204FB001E9D2C /* DowloadImage.swift */; };
-		1853DC342C020988001E9D2C /* PersonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC332C020988001E9D2C /* PersonDetails.swift */; };
+		1853DC342C020988001E9D2C /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853DC332C020988001E9D2C /* PersonDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1853DC082C01F21E001E9D2C /* GeeksProTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeeksProTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1853DC0B2C01F21E001E9D2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1853DC0D2C01F21E001E9D2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1853DC0F2C01F21E001E9D2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1853DC0F2C01F21E001E9D2C /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
 		1853DC142C01F221001E9D2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1853DC172C01F221001E9D2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1853DC192C01F221001E9D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		1853DC2D2C020197001E9D2C /* PersonsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDTO.swift; sourceTree = "<group>"; };
 		1853DC2F2C02034A001E9D2C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1853DC312C0204FB001E9D2C /* DowloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowloadImage.swift; sourceTree = "<group>"; };
-		1853DC332C020988001E9D2C /* PersonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetails.swift; sourceTree = "<group>"; };
+		1853DC332C020988001E9D2C /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +73,7 @@
 				1853DC1F2C01F24E001E9D2C /* App */,
 				1853DC2A2C020147001E9D2C /* Services */,
 				1853DC202C01F25B001E9D2C /* Modules */,
+				1853DC362C020D74001E9D2C /* PersonDetails */,
 				1853DC212C01F26B001E9D2C /* Recources */,
 				1853DC192C01F221001E9D2C /* Info.plist */,
 			);
@@ -118,9 +119,8 @@
 		1853DC272C01FCA7001E9D2C /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				1853DC0F2C01F21E001E9D2C /* ViewController.swift */,
-				1853DC282C01FEE8001E9D2C /* PersonCollectionViewCell.swift */,
-				1853DC332C020988001E9D2C /* PersonDetails.swift */,
+				1853DC0F2C01F21E001E9D2C /* PersonsViewController.swift */,
+				1853DC352C020D0C001E9D2C /* Components */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -134,6 +134,22 @@
 				1853DC312C0204FB001E9D2C /* DowloadImage.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1853DC352C020D0C001E9D2C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1853DC282C01FEE8001E9D2C /* PersonCollectionViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1853DC362C020D74001E9D2C /* PersonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				1853DC332C020988001E9D2C /* PersonDetailsViewController.swift */,
+			);
+			path = PersonDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,14 +222,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1853DC102C01F21E001E9D2C /* ViewController.swift in Sources */,
+				1853DC102C01F21E001E9D2C /* PersonsViewController.swift in Sources */,
 				1853DC292C01FEE8001E9D2C /* PersonCollectionViewCell.swift in Sources */,
 				1853DC302C02034A001E9D2C /* Constant.swift in Sources */,
 				1853DC242C01F77B001E9D2C /* BaseViewController.swift in Sources */,
 				1853DC262C01F7AE001E9D2C /* BaseView.swift in Sources */,
 				1853DC2E2C020197001E9D2C /* PersonsDTO.swift in Sources */,
 				1853DC322C0204FB001E9D2C /* DowloadImage.swift in Sources */,
-				1853DC342C020988001E9D2C /* PersonDetails.swift in Sources */,
+				1853DC342C020988001E9D2C /* PersonDetailsViewController.swift in Sources */,
 				1853DC0C2C01F21E001E9D2C /* AppDelegate.swift in Sources */,
 				1853DC0E2C01F21E001E9D2C /* SceneDelegate.swift in Sources */,
 				1853DC2C2C02016D001E9D2C /* NetworkService.swift in Sources */,
