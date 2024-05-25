@@ -22,17 +22,11 @@ class ViewController: BaseViewController {
         return collection
     }()
     
-    private var people: [PersonDTO] = []
+    private var persons: [PersonDTO] = []
     
     private let networkSertvice = NetworkService()
     
     private var selectedCategory: PersonDTO?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        setup()
-    }
     
     override func setup() {
         setupAdd()
@@ -70,7 +64,7 @@ class ViewController: BaseViewController {
                 guard let `self` = self else {return}
                 switch result {
                 case .success(let model):
-                    self.people = model
+                    self.persons = model
                     self.personCollectionView.reloadData()
                 case .failure(let error):
                     print("\(error.localizedDescription)")
@@ -78,24 +72,30 @@ class ViewController: BaseViewController {
             }
         }
     }
+    
+    private func handlePersonDetailsTap(with person: PersonDTO) {
+        let detailVC = PersonDetailsViewController()
+        detailVC.selectedProduct = person.id
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 
 }
 
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        people.count
+        persons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PersonCollectionViewCell.reusID, for: indexPath) as! PersonCollectionViewCell
-        cell.fill(with: people[indexPath.row])
+        cell.fill(with: persons[indexPath.row])
         return cell
     }
 }
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        handlePersonDetailsTap(with: persons[indexPath.row])
     }
 }
